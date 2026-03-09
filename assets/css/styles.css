@@ -1,0 +1,61 @@
+body{
+background: linear-gradient(135deg,#f6f9fc,#e9eef5);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+main{
+flex:1;
+}
+
+/* TITULOS */
+
+.title{
+font-weight:700;
+}
+
+.subtitle{
+color:#6c757d;
+}
+
+
+/* TARJETAS DE CANVAS */
+
+.canvas-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.3s;
+}
+
+.canvas-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* CANVAS */
+
+.canvas-box{
+border-radius:10px;
+border:1px solid #ddd;
+margin-top:10px;
+width:100%;
+}
+
+/* FOOTER */
+
+.footer{
+background:#212529;
+color:white;
+padding:25px 0;
+margin-top:40px;
+}
+
+.footer p{
+margin:2px;
+font-size:14px;
+}

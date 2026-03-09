@@ -57,27 +57,46 @@ class Circle {
   }
 }
 
-let maxRadius = Math.min(canvasRandom.width, canvasRandom.height) / 4;
-let randomRadius = Math.floor(Math.random() * maxRadius) + 20;
-
-let randomX = Math.random() * (canvasRandom.width - 2 * randomRadius) + randomRadius;
-let randomY = Math.random() * (canvasRandom.height - 2 * randomRadius) + randomRadius;
-
-let miCirculo = new Circle(canvasOOP.width / 2, canvasOOP.height / 2, 50, "red", "Tec", "rgb(66, 135, 245)");
-miCirculo.draw(ctx);
-
-let miCirculoRandom = new Circle(randomX, randomY, randomRadius, "green", "Tec", "rgb(83, 186, 52)");
-miCirculoRandom.draw(ctxRandom);
-
-let maxCircles = 10;
-let arrayCircle = [];
-
+//Función para generar color aleatorio
 function randomColor() {
   let r = Math.floor(Math.random() * 256);
   let g = Math.floor(Math.random() * 256);
   let b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
+
+
+let maxRadius = Math.min(canvasRandom.width, canvasRandom.height) / 4;
+let randomRadius = Math.floor(Math.random() * maxRadius) + 20;
+
+let randomX = Math.random() * (canvasRandom.width - 2 * randomRadius) + randomRadius;
+let randomY = Math.random() * (canvasRandom.height - 2 * randomRadius) + randomRadius;
+
+let miCirculo = new Circle(
+  canvasOOP.width / 2,
+  canvasOOP.height / 2,
+  50,
+  randomColor(),
+  "Tec",
+  randomColor()
+);
+miCirculo.draw(ctx);
+
+let miCirculoRandom = new Circle(
+  randomX,
+  randomY,
+  randomRadius,
+  randomColor(),
+  "Tec",
+  randomColor()
+);
+
+miCirculoRandom.draw(ctxRandom);
+
+let maxCircles = 10;
+let arrayCircle = [];
+
+
 
 for (let i = 0; i < maxCircles; i++) {
 
